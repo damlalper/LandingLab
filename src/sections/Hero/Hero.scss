@@ -1,0 +1,166 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3xl) 0;
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    min-height: auto;
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-2xl);
+    }
+  }
+
+  &__content {
+    z-index: 1;
+
+    @include mobile {
+      text-align: center;
+    }
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-primary);
+
+    @include mobile {
+      font-size: var(--font-size-3xl);
+    }
+
+    @include tablet {
+      font-size: var(--font-size-4xl);
+    }
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    line-height: var(--line-height-relaxed);
+
+    @include mobile {
+      font-size: var(--font-size-base);
+    }
+
+    @include tablet {
+      font-size: var(--font-size-lg);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  &__illustration {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      height: 300px;
+    }
+
+    @include tablet {
+      height: 400px;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+
+    &--1 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      opacity: 0.2;
+      animation-delay: 0s;
+
+      @include mobile {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &--2 {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+      opacity: 0.3;
+      animation-delay: 2s;
+      left: 50px;
+      top: 50px;
+
+      @include mobile {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    &--3 {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+      opacity: 0.25;
+      animation-delay: 4s;
+      right: 50px;
+      bottom: 50px;
+
+      @include mobile {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
