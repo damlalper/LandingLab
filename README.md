@@ -174,6 +174,75 @@ Key decisions:
 - Lazy loading for modal content
 - Efficient re-renders with React
 
+## Lighthouse Performance Report
+
+The project achieves excellent Lighthouse scores, exceeding the minimum requirement of 90/100:
+
+![Lighthouse Scores](./docs/scores.png)
+
+### Detailed Scores
+
+| Category | Score | Status |
+|----------|-------|--------|
+| **Performance** | 100/100 | ✅ Excellent |
+| **Accessibility** | 95/100 | ✅ Excellent |
+| **Best Practices** | 100/100 | ✅ Excellent |
+| **SEO** | 91/100 | ✅ Excellent |
+
+### Score Breakdown
+
+<details>
+<summary>Performance (100/100)</summary>
+
+![Performance Score](./docs/performance.png)
+
+- First Contentful Paint: Excellent
+- Largest Contentful Paint: Excellent
+- Total Blocking Time: Excellent
+- Cumulative Layout Shift: Excellent
+- Speed Index: Excellent
+</details>
+
+<details>
+<summary>Accessibility (95/100)</summary>
+
+![Accessibility Score](./docs/accessibility.png)
+
+- ARIA attributes properly used
+- Semantic HTML structure
+- Keyboard navigation support
+- Sufficient color contrast
+- Screen reader friendly
+</details>
+
+<details>
+<summary>Best Practices (100/100)</summary>
+
+![Best Practices Score](./docs/best_practices.png)
+
+- No browser errors
+- HTTPS ready
+- No deprecated APIs
+- Optimized images
+- Valid source maps
+</details>
+
+<details>
+<summary>SEO (91/100)</summary>
+
+![SEO Score](./docs/SEO.png)
+
+- Valid meta tags
+- Crawlable links
+- Mobile-friendly viewport
+- Descriptive page title
+- Valid structured data
+</details>
+
+**Full Reports**: Detailed HTML reports are available in the project root:
+- `lighthouse-desktop.html` - Desktop performance report
+- `lighthouse-mobile.html` - Mobile performance report
+
 ## Browser Support
 
 - Chrome (latest)
