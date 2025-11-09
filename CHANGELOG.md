@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-11-09
+
+### Added
+- Deployed the project to Vercel.
+- Added the live demo URL to the `README.md`.
+- Added Lighthouse performance reports to the `README.md` and `docs`.
+
+### Fixed
+- Corrected the nested Git repository issue for the `landing-page` directory, integrating it as a regular folder.
+
+### Changed
+- Updated `.gitignore` to include the `.vercel` directory.
+
 ## [1.0.0] - 2024-11-08
 
 ### Added
@@ -14,70 +27,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Git workflow with main and dev branches
 
 #### UI Component Library
-- Button component with 4 variants (primary, secondary, outline, ghost) and 3 sizes
-- Input component with validation support and error display
-- Card component with header, body, footer sections and multiple variants
-- Modal component with accessibility features and keyboard navigation
-- Accordion component for FAQ sections with expand/collapse functionality
+- Button, Input, Card, Modal, Accordion components
 
 #### Landing Page Sections
-- Hero section with animated graphics and call-to-action buttons
-- Features section showcasing 6 key features with icons
-- Pricing section with 3 pricing tiers and feature lists
-- FAQ section with accordion component
-- Contact form with email validation and error handling
+- Hero, Features, Pricing, FAQ, Contact sections
 
 #### Theme System
 - Light/Dark theme toggle with CSS variables
-- Theme persistence in localStorage
-- System preference detection
-- Smooth theme transitions
 
 #### Responsive Design
-- Mobile-first approach (320px-1440px)
-- 3 breakpoints: mobile (≤640px), tablet (641-1024px), desktop (≥1025px)
-- Flexible grid layouts
-- Responsive typography
+- Mobile-first approach with 3 breakpoints
 
 #### Accessibility
-- Semantic HTML5 structure
-- ARIA attributes (aria-label, aria-expanded, aria-invalid, etc.)
-- Keyboard navigation support
-- Focus management in modals
-- Screen reader friendly
-- Sufficient color contrast
+- Semantic HTML, ARIA attributes, keyboard navigation
 
 #### Form Validation
-- Email format validation using regex
-- Required field validation
-- Minimum length validation
-- Real-time error display
-- Accessible error messages
+- Real-time email and required field validation
 
 #### Performance Optimizations
-- Code splitting
-- CSS minification
-- Tree shaking
-- Optimized component re-renders
+- Code splitting, CSS minification, tree shaking
 
 ### Documentation
-- Comprehensive README.md with installation and usage instructions
+- Comprehensive README.md
 - Component library documentation
 - Architecture decision records
-- Project structure overview
 
 ### Developer Experience
 - Hot Module Replacement (HMR)
 - TypeScript for type safety
-- ESLint for code quality
-- Prettier for code formatting
-- Git hooks for pre-commit checks
-
-## [Unreleased]
-
-### Planned
-- Lighthouse performance audit
-- Deployment to Vercel/Netlify
-- Additional animations and micro-interactions
-- Image optimization
-- PWA support
+- ESLint and Prettier for code quality
