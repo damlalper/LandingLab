@@ -1,0 +1,103 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.theme-toggle {
+  position: fixed;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  z-index: var(--z-fixed);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-slow);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -50%;
+    background: conic-gradient(
+      from 0deg,
+      transparent,
+      var(--color-primary),
+      transparent 30%
+    );
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    animation: rotate 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    border-color: var(--color-primary);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95) rotate(-10deg);
+    transition: all 0.1s ease;
+  }
+
+  @include focus-visible;
+
+  @include mobile {
+    width: 40px;
+    height: 40px;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+
+  &__icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: var(--color-text-primary);
+    z-index: 1;
+
+    svg {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    &--sun {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+
+      [data-theme='dark'] & {
+        opacity: 0;
+        transform: rotate(360deg) scale(0);
+      }
+    }
+
+    &--moon {
+      opacity: 0;
+      transform: rotate(-360deg) scale(0);
+
+      [data-theme='dark'] & {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+    }
+  }
+}
