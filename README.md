@@ -159,7 +159,10 @@ The contact form includes:
 
 ## Architecture Decisions
 
-See `/docs/adr-*.md` for detailed architecture decision records.
+See the `docs/` folder for detailed architecture decision records:
+- [ADR 001: Technology Stack](./docs/adr-001-technology-stack.md)
+- [ADR 002: Styling Approach](./docs/adr-002-styling-approach.md)
+- [ADR 003: Component Architecture](./docs/adr-003-component-architecture.md)
 
 Key decisions:
 - **React + TypeScript**: Type safety and modern React features
@@ -244,8 +247,16 @@ The project achieves excellent Lighthouse scores, exceeding the minimum requirem
 </details>
 
 **Full Reports**: Detailed HTML reports are available in the project root:
-- `lighthouse-desktop.html` - Desktop performance report
-- `lighthouse-mobile.html` - Mobile performance report
+- [Desktop Performance Report](./lighthouse-desktop.html)
+- [Mobile Performance Report](./lighthouse-mobile.html)
+
+## Version History
+
+For a detailed log of all changes, new features, and bug fixes, please refer to the [CHANGELOG.md](./CHANGELOG.md) file located at the project root.
+
+## License Information
+
+This project is open-sourced under the MIT License. The full text of the license can be found in the [LICENSE](./LICENSE) file at the project root.
 
 ## Browser Support
 
